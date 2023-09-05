@@ -114,13 +114,13 @@ const MeasurerCalc = ({ table, setTable }) => {
   const CalcPoints = (f, n) => {
     let isValid = true
     f.forEach((item) => {
-      console.log('calc',item.score1.length, item.score2.length)
+      // console.log('calc',item.score1.length, item.score2.length)
       if (item.score1.length === 0 || item.score2.length === 0) {
         isValid = false
       }
     })
     
-    console.log('item', isValid)
+    // console.log('item', isValid)
     if (!isValid) {
       //suma puntos llenos las casillas
       setError1(true)
