@@ -98,8 +98,8 @@ const MeasurerCalc = ({ table, setTable }) => {
       info1.PP = info1.PP + 1
       info2.PG = info2.PG + 1
       info2.PTS = info2.PTS + 3
-      info2.DG = info2.DG - (item.score2 - item.score1)
-      info1.DG = info1.DG + (item.score2 - item.score1)
+      info2.DG = info2.DG + (item.score2 - item.score1)
+      info1.DG = info1.DG - (item.score2 - item.score1)
     } else if (item.score1 === item.score2) {
       info2.PJ = info2.PJ + 1
       info1.PJ = info1.PJ + 1
