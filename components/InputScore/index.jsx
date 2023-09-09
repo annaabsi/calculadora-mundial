@@ -2,13 +2,14 @@ import React from 'react'
 
 import styled from 'styled-components'
 
-const InputScore = ({ onchange, value, name, type = 'text', ...props }) => {
+const InputScore = ({ onchange, value, name, type = 'text', isDisabled, ...props }) => {
   return (
     <>
       <Input
         value={value}
         name={name}
         type={type}
+        disabled={isDisabled}
         {...props}
       />
     </>

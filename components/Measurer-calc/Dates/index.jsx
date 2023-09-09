@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import InputScore from '../../InputScore'
 
-const Dates = ({ team1, team2, logo1, logo2, handleInput ,score1, score2 }) => {
+const Dates = ({ team1, team2, logo1, logo2, handleInput, score1, score2, isDisabled }) => {
   return (
     <ContentDate>
       <ContTeam1>
@@ -17,6 +17,7 @@ const Dates = ({ team1, team2, logo1, logo2, handleInput ,score1, score2 }) => {
           value={score1}
           maxLength={2}
           pattern="[0-9]*"
+          disabled={isDisabled}
         />
       </ContTeam1>
       <Vs>:</Vs>
@@ -27,6 +28,7 @@ const Dates = ({ team1, team2, logo1, logo2, handleInput ,score1, score2 }) => {
           value={score2}
           maxLength={2}
           pattern="[0-9]*"
+          disabled={isDisabled}
         />
         <Flag>
           <ImageLogo src={logo2} />

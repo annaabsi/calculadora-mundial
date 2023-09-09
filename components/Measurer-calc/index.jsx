@@ -11,7 +11,7 @@ const MeasurerCalc = ({ table, setTable }) => {
   const [fecha2, setFecha2] = useState(FixturePartidos[1])
   const [fecha3, setFecha3] = useState(FixturePartidos[2])
   const [fecha4, setFecha4] = useState(FixturePartidos[3])
-  const [fecha, setFecha] = useState(1)
+  const [fecha, setFecha] = useState(2)
 
   const [error1, setError1] = useState(false)
   const [error2, setError2] = useState(false)
@@ -23,17 +23,18 @@ const MeasurerCalc = ({ table, setTable }) => {
   const [errorColor3, setErrorColor3] = useState(false)
   const [errorColor4, setErrorColor4] = useState(false)
 
-  const  [btnDisabled1, setBtnDisabled1] = useState(false)
+  const  [btnDisabled1, setBtnDisabled1] = useState(true)
   const  [btnDisabled2, setBtnDisabled2] = useState(false)
   const  [btnDisabled3, setBtnDisabled3] = useState(false)
   const  [btnDisabled4, setBtnDisabled4] = useState(false)
 
-  const [colorBtn1, setColorBtn1] = useState('#398E06')
+  const [colorBtn1, setColorBtn1] = useState('red')
   const [colorBtn2, setColorBtn2] = useState('#398E06')
   const [colorBtn3, setColorBtn3] = useState('#398E06')
   const [colorBtn4, setColorBtn4] = useState('#398E06')
 
   // const [isValid, setIsValid] = useState(true)
+  const [isDisabled, setIsDisabled] = useState(false);
 
   const arrayStates = [
     fecha,
@@ -56,7 +57,8 @@ const MeasurerCalc = ({ table, setTable }) => {
     colorBtn1, 
     colorBtn2, 
     colorBtn3, 
-    colorBtn4
+    colorBtn4,
+    isDisabled
   ]
 
   const handleInput = (e, fn, id, data) => {
@@ -133,7 +135,7 @@ const MeasurerCalc = ({ table, setTable }) => {
       setErrorColor3(true)
       setErrorColor4(true)
       
-      setBtnDisabled1(false)
+      setBtnDisabled1(true)
       setBtnDisabled2(false)
       setBtnDisabled3(false)
       setBtnDisabled4(false)
@@ -190,6 +192,7 @@ const MeasurerCalc = ({ table, setTable }) => {
                 logo2={item.logo2}
                 score1={item.score1}
                 score2={item.score2}
+                isDisabled={true}
                 handleInput={(e) => handleInput(e, setFecha1, item.id, fecha1)}
               />
             })

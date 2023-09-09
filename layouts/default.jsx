@@ -26,20 +26,25 @@ const Layout = (props) => {
         {/* Metadatos Facebook */}
         <meta property="fb:pages" content="94604237016" />
         <meta property="fb:app_id" content="489210501129201" />
-        <meta property="og:image" content="https://origin.cronosmedia.glr.pe/large/2021/10/14/lg_6168aa194dbe4a0ab457331d.jpg"/>
+        <meta property="og:image" content="https://larepublica.cronosmedia.glr.pe/package/2023/09/06/40e7jcgh6d-portadas.jpg"/>
+        <meta property="og:url" content="https://especiales.larepublica.pe/eliminatorias-mundial-2026-tabla-posiciones-fixture-estadisticas-ultimas-noticias-conmebol/"/>
+        <meta property="og:title" content="Eliminatorias Sudamericanas 2026: Calculadora Copa Mundial 2026, tabla de posiciones, fixture, estadísticas y últimas noticias de las clasificatorias Conmebol"/>
+        <meta property="og:description" content="Fecha a fecha. Sigue el fixture, los resultados y la tabla de posiciones de las eliminatorias sudamericanas."/>
+        <meta property="og:type" content="article"/>
         {/* Metadatos Twitter */} 
-        <meta property="twitter:image" content="https://origin.cronosmedia.glr.pe/large/2021/10/14/lg_6168aa194dbe4a0ab457331d.jpg" />
+        <meta property="twitter:image" content="https://larepublica.cronosmedia.glr.pe/package/2023/09/06/40e7jcgh6d-portadas.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@larepublica_pe" />
-
+        <meta name="twitter:title" content="Eliminatorias Sudamericanas 2026: Calculadora Copa Mundial 2026, tabla de posiciones, fixture, estadísticas y últimas noticias de las clasificatorias Conmebol"/>
+        <meta name="twitter:description" content="Fecha a fecha. Sigue el fixture, los resultados y la tabla de posiciones de las eliminatorias sudamericanas."/>
         <link href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap" rel="stylesheet" />
         <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.larepublica.pe/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.larepublica.pe/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.larepublica.pe/favicon-16x16.png" />
         <link rel="icon" type="image/x-icon" href="https://cdn.larepublica.pe/favicon.ico"></link>
-        <link rel="canonical" href="https://especiales.larepublica.pe/eliminatorias-sudamericanas-mundial-2026-tabla-posiciones-fixture-estadisticas-ultimas-noticias-clasificatorias-conmebol/" />
+        <link rel="canonical" href="https://especiales.larepublica.pe/eliminatorias-mundial-2026-tabla-posiciones-fixture-estadisticas-ultimas-noticias-conmebol/" />
         
-        <title>Eliminatorias Sudamericanas 2026 | Calculadora Copa Mundial 2026: tabla de posiciones, fixture, estadísticas y últimas noticias de las clasificatorias Conmebol</title>
+        <title>Eliminatorias Sudamericanas 2026: Calculadora Copa Mundial 2026, tabla de posiciones, fixture, estadísticas y últimas noticias de las clasificatorias Conmebol</title>
       </NextHead>
       <Wrapper>
         <Header />
