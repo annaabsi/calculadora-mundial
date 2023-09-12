@@ -28,7 +28,7 @@ const MeasurerCalc = ({ table, setTable }) => {
   const  [btnDisabled3, setBtnDisabled3] = useState(false)
   const  [btnDisabled4, setBtnDisabled4] = useState(false)
 
-  const [colorBtn1, setColorBtn1] = useState('red')
+  const [colorBtn1, setColorBtn1] = useState('grey')
   const [colorBtn2, setColorBtn2] = useState('#398E06')
   const [colorBtn3, setColorBtn3] = useState('#398E06')
   const [colorBtn4, setColorBtn4] = useState('#398E06')
@@ -197,9 +197,6 @@ const MeasurerCalc = ({ table, setTable }) => {
               />
             })
           }
-          {errorColor1 && <ButtonCalc colorBtn={colorBtn1} onClick={() => { CalcPoints(fecha1) }} />}
-          {!errorColor1 && <ButtonCalc colorBtn={colorBtn1} disabled={btnDisabled1} onClick={() => { CalcPoints(fecha1, 1) }} />}
-          {error1 && <TextError>Complete todos los espacios.</TextError>}
         </>
       )
     }

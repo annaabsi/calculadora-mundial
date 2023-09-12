@@ -22,7 +22,6 @@ const WrapperBtn = styled.div`
 const ButtonCalculator = styled.button`
   height: 28px;
   width: inherit;
-  cursor: pointer;
   background-color: ${({colorBtn}) => colorBtn};
   color: white;
   font-size: 18px;

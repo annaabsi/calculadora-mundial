@@ -21,7 +21,7 @@ export default InputScore
 const Input = styled.input`
   width: 40px;
   height: 40px;
-  background-color: #8D1A41;
+  background-color:${(props)=>props.disabled?'gray':'#8D1A41'};
   color: white;
   font-size: 20px;
   text-align: center;
