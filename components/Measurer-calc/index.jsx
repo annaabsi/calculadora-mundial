@@ -11,7 +11,7 @@ const MeasurerCalc = ({ table, setTable }) => {
   const [fecha2, setFecha2] = useState(FixturePartidos[1])
   const [fecha3, setFecha3] = useState(FixturePartidos[2])
   const [fecha4, setFecha4] = useState(FixturePartidos[3])
-  const [fecha, setFecha] = useState(2)
+  const [fecha, setFecha] = useState(3)
 
   const [error1, setError1] = useState(false)
   const [error2, setError2] = useState(false)
@@ -24,12 +24,12 @@ const MeasurerCalc = ({ table, setTable }) => {
   const [errorColor4, setErrorColor4] = useState(false)
 
   const  [btnDisabled1, setBtnDisabled1] = useState(true)
-  const  [btnDisabled2, setBtnDisabled2] = useState(false)
+  const  [btnDisabled2, setBtnDisabled2] = useState(true)
   const  [btnDisabled3, setBtnDisabled3] = useState(false)
   const  [btnDisabled4, setBtnDisabled4] = useState(false)
 
   const [colorBtn1, setColorBtn1] = useState('grey')
-  const [colorBtn2, setColorBtn2] = useState('#398E06')
+  const [colorBtn2, setColorBtn2] = useState('grey')
   const [colorBtn3, setColorBtn3] = useState('#398E06')
   const [colorBtn4, setColorBtn4] = useState('#398E06')
 
@@ -214,13 +214,11 @@ const MeasurerCalc = ({ table, setTable }) => {
                 logo2={item.logo2}
                 score1={item.score1}
                 score2={item.score2}
+                isDisabled={true}
                 handleInput={(e) => handleInput(e, setFecha2, item.id, fecha2)}
               />
             })
           }
-          {errorColor2 && <ButtonCalc colorBtn={colorBtn2} onClick={() => { CalcPoints(fecha2) }} />}
-          {!errorColor2 && <ButtonCalc colorBtn={colorBtn2} disabled={btnDisabled2} onClick={() => { CalcPoints(fecha2, 2) }} />}
-          {error2 && <TextError>Complete todos los espacios.</TextError>}
         </>
       )
     }
