@@ -9,13 +9,18 @@ const TableCalcPositions = ({ table, setTable }) => {
   const ListarEqipos = () => {
 
       const newArray = ArrayPointsTable.sort((a, b) => {
-        if ((a.PTS > b.PTS && a.DG < b.DG) || a.PTS > b.PTS) {
-          return -1;
+        // if ((a.PTS > b.PTS && a.DG > b.DG) || a.PTS > b.PTS) {
+        //   return -1;
+        // }
+        // if ((a.PTS < b.PTS && a.DG < b.DG) || a.PTS < b.PTS) {
+        //   return 1;
+        // }
+        // return 0;
+        if (a.PTS !== b.PTS) {
+          return b.PTS - a.PTS;
+        } else {
+          return b.DG - a.DG;
         }
-        if ((a.PTS < b.PTS && a.DG > b.DG) || a.PTS < b.PTS) {
-          return 1;
-        }
-        return 0;
       })
       return newArray.map((item, i) => {
           if (i < 6) {
