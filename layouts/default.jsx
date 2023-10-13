@@ -47,7 +47,50 @@ const Layout = (props) => {
         <title>Eliminatorias Sudamericanas 2026: calculadora de la Copa Mundial, tabla de posiciones y fixture</title>
         <link rel="stylesheet" href="ads.css"/>
         <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-        <script src="ads.js"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+          window.googletag = window.googletag || { cmd: [] };
+          googletag.cmd.push(function () {
+              googletag.defineSlot('/422621568/larepublica.pe_Lateral_Left', [120, 600], "div-gpt-ad-1697124575756-0").addService(googletag.pubads())
+                  .defineSizeMapping(googletag.sizeMapping()
+                      .addSize([1024, 768], [[120, 600], [160, 600]])
+                      .addSize([980, 600], [[120, 600], [160, 600]])
+                      .addSize([770, 300], []).addSize([0, 0], [])
+                      .build());
+              googletag.pubads().enableSingleRequest();
+              googletag.enableServices();
+          });
+          googletag.cmd.push(function () {
+              googletag.defineSlot('/422621568/larepublica.pe_Lateral_Right', [120, 600], "div-gpt-ad-1697124530943-0").addService(googletag.pubads())
+                  .defineSizeMapping(googletag.sizeMapping()
+                      .addSize([1024, 768], [[120, 600], [160, 600]])
+                      .addSize([980, 600], [[120, 600], [160, 600]])
+                      .addSize([770, 300], []).addSize([0, 0], [])
+                      .build());
+              googletag.pubads().enableSingleRequest();
+              googletag.enableServices();
+          });
+          googletag.cmd.push(function () {
+              googletag.defineSlot('/422621568/larepublica.pe_Top', [300, 50], 'div-gpt-ad-1697124637177-0').addService(googletag.pubads())
+                  .defineSizeMapping(googletag.sizeMapping()
+                      .addSize([980, 600], [])
+                      .addSize([0, 0], [[320, 100], [320, 50], [300, 100], [300, 50]])
+                      .build());
+              googletag.pubads().enableSingleRequest();
+              googletag.enableServices();
+          });
+          googletag.cmd.push(function () {
+              googletag.defineSlot('/422621568/larepublica.pe_Sticky', [300, 50], 'div-gpt-ad-1697124686278-0').addService(googletag.pubads())
+                  .defineSizeMapping(googletag.sizeMapping()
+                      .addSize([1024, 768], [])
+                      .addSize([980, 600], [])
+                      .addSize([0, 0],[[320,100],[320,50],[300,100],[300,50]])
+                      .build());
+              googletag.pubads().enableSingleRequest();
+              googletag.enableServices();
+          });
+          `
+        }} />
       </NextHead>
       <div dangerouslySetInnerHTML={{
           __html: `
