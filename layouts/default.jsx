@@ -45,7 +45,39 @@ const Layout = (props) => {
         <link rel="canonical" href="https://especiales.larepublica.pe/eliminatorias-mundial-2026-tabla-posiciones-fixture-estadisticas-ultimas-noticias-conmebol/" />
         
         <title>Eliminatorias Sudamericanas 2026: calculadora de la Copa Mundial, tabla de posiciones y fixture</title>
+        <link rel="stylesheet" href="ads.css"/>
+        <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+        <script src="ads.js"></script>
       </NextHead>
+      <div dangerouslySetInnerHTML={{
+          __html: `
+          <div id='div-gpt-ad-1697124637177-0' style='min-width: 300px; min-height: 50px;'>
+              <script>
+                  googletag.cmd.push(function () { googletag.display('div-gpt-ad-1697124637177-0'); });
+              </script>
+          </div>
+          <!-- /422621568/larepublica.pe_Sticky -->
+          <div id='div-gpt-ad-1697124686278-0' style='min-width: 300px; min-height: 50px;'>
+              <script>
+                  googletag.cmd.push(function () { googletag.display('div-gpt-ad-1697124686278-0'); });
+              </script>
+          </div>
+          <div class="lateral-ads-container">
+              <!-- /422621568/larepublica.pe_Lateral_Left -->
+              <div class="lateral-ad" id='div-gpt-ad-1697124530943-0' style='min-width: 120px; min-height: 600px;'>
+                  <script>
+                      googletag.cmd.push(function () { googletag.display('div-gpt-ad-1697124530943-0'); });
+                  </script>
+              </div>
+              <!-- /422621568/larepublica.pe_Lateral_Right -->
+              <div class="lateral-ad" id='div-gpt-ad-1697124575756-0' style='min-width: 120px; min-height: 600px;'>
+                  <script>
+                      googletag.cmd.push(function () { googletag.display('div-gpt-ad-1697124575756-0'); });
+                  </script>
+              </div>
+          </div>
+          `
+      }} />
       <Wrapper>
         <Header />
         <LayoutContent>
