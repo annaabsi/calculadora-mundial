@@ -280,11 +280,11 @@ export const ArrayPointsTable = [
     pais: 'Ecuador',
     logo: './static/images/logo-ecuador.png',
     PJ: 3,
-    PG: 1,
+    PG: 2,
     PE: 0,
     PP: 1,
-    DG: 0,
-    PTS: 0
+    DG: 1,
+    PTS: 3
   },
   {
     pais: 'Bolivia',
