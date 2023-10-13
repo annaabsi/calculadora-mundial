@@ -197,16 +197,6 @@ export const FixturePartidos = [
 
 export const ArrayPointsTable = [
   {
-    pais: 'Brasil',
-    logo: './static/images/logo-brasil.png',
-    PJ: 3,
-    PG: 2,
-    PE: 1,
-    PP: 0,
-    DG: 5,
-    PTS: 7
-  },
-  {
     pais: 'Argentina',
     logo: './static/images/logo-argentina.png',
     PJ: 3,
@@ -215,6 +205,16 @@ export const ArrayPointsTable = [
     PP: 0,
     DG: 5,
     PTS: 9
+  },
+  {
+    pais: 'Brasil',
+    logo: './static/images/logo-brasil.png',
+    PJ: 3,
+    PG: 2,
+    PE: 1,
+    PP: 0,
+    DG: 5,
+    PTS: 7
   },
   {
     pais: 'Colombia',
@@ -237,6 +237,16 @@ export const ArrayPointsTable = [
     PTS: 4 
   },
   {
+    pais: 'Chile',
+    logo: './static/images/logo-chile.png',
+    PJ: 3,
+    PG: 1,
+    PE: 1,
+    PP: 1,
+    DG: 0,
+    PTS: 4
+  },
+  {
     pais: 'Venezuela',
     logo: './static/images/logo-venezuela.png',
     PJ: 3,
@@ -245,6 +255,16 @@ export const ArrayPointsTable = [
     PP: 1,
     DG: 0,
     PTS: 4
+  },
+  {
+    pais: 'Ecuador',
+    logo: './static/images/logo-ecuador.png',
+    PJ: 3,
+    PG: 2,
+    PE: 0,
+    PP: 1,
+    DG: 1,
+    PTS: 3
   },
   {
     pais: 'Paraguay',
@@ -265,26 +285,6 @@ export const ArrayPointsTable = [
     PP: 2,
     DG: -3,
     PTS: 1
-  },
-  {
-    pais: 'Chile',
-    logo: './static/images/logo-chile.png',
-    PJ: 3,
-    PG: 0,
-    PE: 1,
-    PP: 1,
-    DG: -2,
-    PTS: 4
-  },
-  {
-    pais: 'Ecuador',
-    logo: './static/images/logo-ecuador.png',
-    PJ: 3,
-    PG: 2,
-    PE: 0,
-    PP: 1,
-    DG: 1,
-    PTS: 3
   },
   {
     pais: 'Bolivia',
