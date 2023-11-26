@@ -12,31 +12,36 @@ const MeasurerCalc = ({ table, setTable }) => {
   const [fecha3, setFecha3] = useState(FixturePartidos[2])
   const [fecha4, setFecha4] = useState(FixturePartidos[3])
   const [fecha5, setFecha5] = useState(FixturePartidos[4])
-  const [fecha, setFecha] = useState(5)
+  const [fecha6, setFecha6] = useState(FixturePartidos[5])
+  const [fecha, setFecha] = useState(6)
 
   const [error1, setError1] = useState(false)
   const [error2, setError2] = useState(false)
   const [error3, setError3] = useState(false)
   const [error4, setError4] = useState(false)
   const [error5, setError5] = useState(false)
+  const [error6, setError6] = useState(false)
 
   const [errorColor1, setErrorColor1] = useState(false)
   const [errorColor2, setErrorColor2] = useState(false)
   const [errorColor3, setErrorColor3] = useState(false)
   const [errorColor4, setErrorColor4] = useState(false)
   const [errorColor5, setErrorColor5] = useState(false)
+  const [errorColor6, setErrorColor6] = useState(false)
 
   const  [btnDisabled1, setBtnDisabled1] = useState(true)
   const  [btnDisabled2, setBtnDisabled2] = useState(true)
   const  [btnDisabled3, setBtnDisabled3] = useState(true)
   const  [btnDisabled4, setBtnDisabled4] = useState(true)
-  const  [btnDisabled5, setBtnDisabled5] = useState(false)
+  const  [btnDisabled5, setBtnDisabled5] = useState(true)
+  const  [btnDisabled6, setBtnDisabled6] = useState(false)
 
   const [colorBtn1, setColorBtn1] = useState('grey')
   const [colorBtn2, setColorBtn2] = useState('grey')
   const [colorBtn3, setColorBtn3] = useState('grey')
   const [colorBtn4, setColorBtn4] = useState('grey')
-  const [colorBtn5, setColorBtn5] = useState('#398E06')
+  const [colorBtn5, setColorBtn5] = useState('grey')
+  const [colorBtn6, setColorBtn6] = useState('#398E06')
 
   // const [isValid, setIsValid] = useState(true)
   const [isDisabled, setIsDisabled] = useState(false);
@@ -48,26 +53,31 @@ const MeasurerCalc = ({ table, setTable }) => {
     fecha3, 
     fecha4, 
     fecha5,
+    fecha6,
     error1,
     error2, 
     error3, 
     error4,
     error5,
+    error6,
     errorColor1, 
     errorColor2,
     errorColor3,
     errorColor4,
     errorColor5,
+    errorColor6,
     btnDisabled1, 
     btnDisabled2, 
     btnDisabled3, 
     btnDisabled4,
     btnDisabled5,
+    btnDisabled6,
     colorBtn1, 
     colorBtn2, 
     colorBtn3, 
     colorBtn4,
     colorBtn5,
+    colorBtn6,
     isDisabled
   ]
 
@@ -140,18 +150,21 @@ const MeasurerCalc = ({ table, setTable }) => {
       setError3(true)
       setError4(true)
       setError5(true)
+      setError6(true)
 
       setErrorColor1(true)
       setErrorColor2(true)
       setErrorColor3(true)
       setErrorColor4(true)
       setErrorColor5(true)
+      setErrorColor6(true)
       
       setBtnDisabled1(true)
       setBtnDisabled2(true)
       setBtnDisabled3(true)
       setBtnDisabled4(true)
       setBtnDisabled5(true)
+      setBtnDisabled6(true)
 
       return
     } else {
@@ -161,12 +174,14 @@ const MeasurerCalc = ({ table, setTable }) => {
       setError2(false)
       setError4(false)
       setError5(false)
+      setError6(false)
 
       setErrorColor1(false)
       setErrorColor2(false)
       setErrorColor3(false)
       setErrorColor4(false)
       setErrorColor5(false)
+      setErrorColor6(false)
 
       if (n === 1){
         setBtnDisabled1(true)
@@ -187,6 +202,10 @@ const MeasurerCalc = ({ table, setTable }) => {
       else if (n === 5){
         setBtnDisabled5(true)
         setColorBtn5('red')
+      }
+      else if (n === 6){
+        setBtnDisabled6(true)
+        setColorBtn6('red')
       }
       
       f.filter(item => item.score1.length > 0 && item.score2.length > 0)
@@ -299,13 +318,35 @@ const MeasurerCalc = ({ table, setTable }) => {
                 logo2={item.logo2}
                 score1={item.score1}
                 score2={item.score2}
+                isDisabled={true}
                 handleInput={(e) => handleInput(e, setFecha5, item.id, fecha5)}
               />
             })
           }
-          {errorColor5 && <ButtonCalc colorBtn={colorBtn5} onClick={() => { CalcPoints(fecha5, 5) }} />}
-          {!errorColor5 && <ButtonCalc colorBtn={colorBtn5} disabled={btnDisabled5} onClick={() => { CalcPoints(fecha5, 5) }} />}
-          {error5 && <TextError>Complete todos los espacios.</TextError>}
+        </>
+      )
+    }
+    else if (number === 6) {
+      return (
+        <>
+          {
+            fecha6 &&
+            fecha6.map((item, i) => {
+              return <Dates
+                key={i}
+                team1={item.nameTeam1}
+                logo1={item.logo1}
+                team2={item.nameTeam2}
+                logo2={item.logo2}
+                score1={item.score1}
+                score2={item.score2}
+                handleInput={(e) => handleInput(e, setFecha6, item.id, fecha6)}
+              />
+            })
+          }
+          {errorColor6 && <ButtonCalc colorBtn={colorBtn6} onClick={() => { CalcPoints(fecha6, 6) }} />}
+          {!errorColor6 && <ButtonCalc colorBtn={colorBtn6} disabled={btnDisabled6} onClick={() => { CalcPoints(fecha6, 6) }} />}
+          {error6 && <TextError>Complete todos los espacios.</TextError>}
         </>
       )
     }
@@ -323,6 +364,7 @@ const MeasurerCalc = ({ table, setTable }) => {
         <SquareComponent onClick={() => setFecha(3)} number="3" />
         <SquareComponent onClick={() => setFecha(4)} number="4" />
         <SquareComponent onClick={() => setFecha(5)} number="5" />
+        <SquareComponent onClick={() => setFecha(6)} number="6" />
       </ContainerBar>
       <TextoFecha>Fecha {fecha}</TextoFecha>
       {partidosxFecha}
